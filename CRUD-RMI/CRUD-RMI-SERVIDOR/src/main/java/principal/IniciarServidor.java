@@ -13,7 +13,7 @@ public class IniciarServidor {
             LocateRegistry.createRegistry(1099);
             
             Produto objetoProduto = new Produto();
-            Naming.rebind("rmi://192.168.1.118:1099/Produto", objetoProduto);
+            Naming.rebind("rmi://192.168.1.254:1099/Produto", objetoProduto);
         } catch(RemoteException re) {
             System.out.println("Erro Remoto: " +re.toString());
         } catch(Exception e){
